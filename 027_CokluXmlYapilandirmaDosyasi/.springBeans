@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.9.13.202004191628-CI-B2465]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[true]]></enableImports>
+	<configs>
+		<config>src/main/resources/SpringBeanConfig.xml</config>
+		<config>src/main/resources/alis/Spring-AlisModulu.xml</config>
+		<config>src/main/resources/satis/Spring-SatisModulu.xml</config>
+		<config>src/main/resources/müsteri/Spring-MüsteriModulu.xml</config>
+		<config>src/main/resources/müsteri/Spring-AdresModulu.xml</config>
+		<config>src/main/resources/yonetim/Spring-YonetimModulu.xml</config>
+		<config>src/main/resources/yonetim/haklar/Spring-HaklarModulu.xml</config>
+		<config>src/main/resources/baglanti/SpringBaglantiModulu.xml</config>
+	</configs>
+	<autoconfigs>
+		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/root-context.xml</config>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+
+
+	<bean id="beanOgrenci" class="com.mimaraslan.ana.Ogrenci">
+		<property name="adi" value="Taner"></property>
+		<property name="soyadi" value="Esen"></property>
+		<property name="bolumu" value="Mühendis"></property>
+		<property name="yasi" value="33"></property>
+	</bean>
+
+
+
+	<bean id="beanKoleksiyonlar"
+		class="com.mimaraslan.ana.Koleksiyonlar">
+		<property name="listeler">
+			<list>
+				<value>Taner Esen</value>
+				<value>Burak Yilmaz</value>
+				<ref bean="beanOgrenci" />
+				
+				<bean class="com.mimaraslan.ana.Ogrenci">
+					<property name="adi" value="Mutlu"></property>
+					<property name="soyadi" value="Esen"></property>
+					<property name="bolumu" value="Mühendis"></property>
+					<property name="yasi" value="38"></property>
+				</bean>
+			</list>
+		</property>
+		
+		<property name="setler">
+			
+			<set>
+				<value>Burak Yilmaz</value>
+				<value>Taner Esen</value>
+				
+				<ref bean="beanOgrenci" />
+				
+				<bean class="com.mimaraslan.ana.Ogrenci">
+					<property name="adi" value="Mutlu"></property>
+					<property name="soyadi" value="Esen"></property>
+					<property name="bolumu" value="Mühendis"></property>
+					<property name="yasi" value="38"></property>
+				</bean>
+			</set>
+		
+		</property>
+		<property name="mapler">
+			<map>
+				<entry key="JSP" value="JavaServerPages"></entry>
+				<entry key="JSF" value="JavaServerFaces"></entry>
+				<entry key="Spring" value="Tansu Kaya"></entry>
+				<entry key="Hibernate">
+					<bean class="com.mimaraslan.ana.Ogrenci">
+					<property name="adi" value="Mutlu"></property>
+					<property name="soyadi" value="Esen"></property>
+					<property name="bolumu" value="Mühendis"></property>
+					<property name="yasi" value="38"></property>
+				</bean>				
+				</entry>
+			</map>
+		</property>
+	
+		
+		
+		<property name="propertiesler">
+			<props>
+				<prop key="Scala">Taner Esen</prop>
+				<prop key="Web">Musa Kilic</prop>
+			</props>
+		
+		</property>
+	</bean>
+</beans>

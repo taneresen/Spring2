@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	
+	
+
+	
+	
+	
+	
+	
+	<!-- <bean id="ogrenci" class="com.mimaraslan.ana.Ogrenci">
+		<property name="adi" value="Taner"/>
+		<property name="soyadi" value="Esen"/>
+		<property name="numarasi" value="1453"/>
+	</bean> -->
+	
+	
+	
+	<bean id="ogrenci" class="com.mimaraslan.ana.Ogrenci"
+		p:adi="Taner"
+		p:soyadi="Esen"
+		p:numarasi="1453"
+		p:universitesi-ref="Okul"/>
+	
+	<bean id="Okul" class="com.mimaraslan.ana.Okul">
+		<property name="kurumAdi" value="Firat Universitesi"></property>
+	</bean>
+	
+</beans>

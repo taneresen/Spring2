@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+
+
+
+
+
+	<bean id="BeanPersonel" class="com.mimaraslan.ana.Personel">
+		<property name="listemiz">
+				
+			<util:list list-class="java.util.ArrayList">
+				<value>Taner Esen</value>
+				<value>Mustafa Elmaci</value>
+				<value>Güler Elmaci</value>
+			</util:list>
+		</property>
+	</bean>
+	
+	<bean id="BeanSehir" class="com.mimaraslan.ana.Sehir">
+		<property name="mapimiz">
+			<util:map map-class="java.util.TreeMap">
+				<entry key="Ankara" value="06"></entry>
+				<entry key="Diyarbakir" value="21"></entry>
+				<entry key="Aksaray" value="68"></entry>
+				<entry key="Zonguldak" value="11"></entry>
+				<entry key="Rize" value="44"></entry>
+				<entry key="Kahramanmaras" value="48"></entry>
+				<entry key="Adana" value="01"></entry>
+			</util:map>
+		</property>
+	</bean>
+</beans>
